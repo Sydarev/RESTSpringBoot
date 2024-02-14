@@ -1,12 +1,9 @@
-package com.example.sb_resthw.Repository;
+package com.example.sb_resthw.repository;
 
 import com.example.sb_resthw.Authorities;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import com.example.sb_resthw.Exceptions.UnauthorizedUser;
-import com.example.sb_resthw.Model.User;
+import com.example.sb_resthw.exceptions.UnauthorizedUser;
 import org.springframework.stereotype.Repository;
 
 @Repository

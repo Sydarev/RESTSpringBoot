@@ -1,16 +1,15 @@
-package com.example.sb_resthw.Service;
+package com.example.sb_resthw.service;
 
 import com.example.sb_resthw.Authorities;
-import com.example.sb_resthw.Exceptions.InvalidCredentials;
-import com.example.sb_resthw.Exceptions.UnauthorizedUser;
-import com.example.sb_resthw.Model.User;
-import com.example.sb_resthw.Repository.UserRepository;
+import com.example.sb_resthw.exceptions.InvalidCredentials;
+import com.example.sb_resthw.exceptions.UnauthorizedUser;
+import com.example.sb_resthw.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
 public class AuthorizationService {
-    UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public AuthorizationService(UserRepository userRepository) {
         this.userRepository = userRepository;

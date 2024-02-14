@@ -1,11 +1,9 @@
 package com.example.sb_resthw.controller;
 
 import com.example.sb_resthw.Authorities;
-import com.example.sb_resthw.Exceptions.InvalidCredentials;
-import com.example.sb_resthw.Exceptions.UnauthorizedUser;
-import com.example.sb_resthw.Model.User;
-import com.example.sb_resthw.Service.AuthorizationService;
-import jakarta.validation.Valid;
+import com.example.sb_resthw.exceptions.InvalidCredentials;
+import com.example.sb_resthw.exceptions.UnauthorizedUser;
+import com.example.sb_resthw.service.AuthorizationService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class AuthorizationController {
-    AuthorizationService service;
+    private final AuthorizationService service;
 
     public AuthorizationController(@Qualifier("getAuthorizationService") AuthorizationService service) {
         this.service = service;
