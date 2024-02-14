@@ -1,8 +1,7 @@
-package com.example.sb_resthw.Configuration;
+package com.example.sb_resthw.configuration;
 
-import com.example.sb_resthw.Repository.UserRepository;
-import com.example.sb_resthw.Service.AuthorizationService;
-import com.example.sb_resthw.controller.AuthorizationController;
+import com.example.sb_resthw.repository.UserRepository;
+import com.example.sb_resthw.service.AuthorizationService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,9 +17,4 @@ public class Config {
     public AuthorizationService getAuthorizationService() {
         return new AuthorizationService(getUserRepository());
     }
-
-//    @Bean
-//    public AuthorizationController getAuthorizationController() {
-//        return new AuthorizationController();
-//    }
 }
