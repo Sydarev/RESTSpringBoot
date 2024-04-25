@@ -1,0 +1,7 @@
+FROM amazoncorretto:17-alpine-jdk
+
+EXPOSE 8080
+
+COPY target/SB_RESTHW-0.0.1-SNAPSHOT.jar myapp.jar
+
+CMD ["java", "-jar", "myapp.jar"]
